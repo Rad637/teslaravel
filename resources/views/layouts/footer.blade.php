@@ -20,11 +20,11 @@
 
         </div>
 
-        {{-- Garis bawah --}}
+        {{-- Garis bawah 
         <div class="footer-bawah">
             <span>&copy; {{ date('Y') }} SISFARM - Surya Farm. Hak cipta dilindungi.</span>
             <span>Dibuat untuk memajukan pertanian Indonesia 🌾</span>
-        </div>
+        </div>--}}
     </div>
 </footer>
 
