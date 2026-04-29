@@ -17,8 +17,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();                          // kolom id auto increment
-            $table->string('nama_lengkap');        // nama lengkap pengguna
-            $table->string('email')->unique();     // email harus unik
+            $table->string('nama_lengkap');         // nama lengkap pengguna
+            $table->string('username')->unique();  // username harus unik
             $table->string('password');            // password (sudah di-hash)
             $table->rememberToken();               // untuk fitur "ingat saya"
             $table->timestamps();                  // created_at dan updated_at otomatis

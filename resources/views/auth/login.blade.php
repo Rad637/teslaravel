@@ -4,7 +4,6 @@
 
 @section('styles')
 <style>
-    /* Halaman login full height */
     .halaman-login {
         min-height: calc(100vh - 68px);
         display: flex;
@@ -15,7 +14,6 @@
         position: relative;
     }
 
-    /* Dekorasi background */
     .halaman-login::before {
         content: '';
         position: absolute;
@@ -27,7 +25,6 @@
         pointer-events: none;
     }
 
-    /* Wrapper dua kolom */
     .login-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -42,7 +39,6 @@
         z-index: 1;
     }
 
-    /* Panel kiri - dekoratif */
     .login-panel-kiri {
         background: linear-gradient(145deg, #1a3c2b 0%, #2d6a4f 100%);
         padding: 48px 40px;
@@ -53,31 +49,23 @@
         overflow: hidden;
     }
 
-    /* Pola background panel kiri */
     .login-panel-kiri::before {
         content: '';
         position: absolute;
-        top: -60px;
-        right: -60px;
-        width: 200px;
-        height: 200px;
+        top: -60px; right: -60px;
+        width: 200px; height: 200px;
         background: radial-gradient(circle, rgba(82,183,136,0.2) 0%, transparent 70%);
     }
 
     .login-panel-kiri::after {
         content: '';
         position: absolute;
-        bottom: -60px;
-        left: -60px;
-        width: 250px;
-        height: 250px;
+        bottom: -60px; left: -60px;
+        width: 250px; height: 250px;
         background: radial-gradient(circle, rgba(82,183,136,0.12) 0%, transparent 70%);
     }
 
-    .panel-kiri-atas {
-        position: relative;
-        z-index: 1;
-    }
+    .panel-kiri-atas { position: relative; z-index: 1; }
 
     .panel-kiri-atas .logo-text {
         display: flex;
@@ -87,8 +75,7 @@
     }
 
     .panel-logo-ikon {
-        width: 44px;
-        height: 44px;
+        width: 44px; height: 44px;
         background: var(--hijau-muda);
         border-radius: 10px;
         display: flex;
@@ -105,36 +92,18 @@
         color: #e8f5e9;
     }
 
-    .panel-logo-sub {
-        font-size: 12px;
-        color: #9dbfa3;
-    }
+    .panel-logo-sub { font-size: 12px; color: #9dbfa3; }
 
-    .panel-kiri-judul {
-        font-size: 28px;
-        color: #e8f5e9;
-        margin-bottom: 10px;
-    }
+    .panel-kiri-judul { font-size: 28px; color: #e8f5e9; margin-bottom: 10px; }
+    .panel-kiri-desc  { font-size: 13px; color: #9dbfa3; line-height: 1.7; }
 
-    .panel-kiri-desc {
-        font-size: 13px;
-        color: #9dbfa3;
-        line-height: 1.7;
-    }
-
-    /* Fitur list di panel kiri */
     .panel-fitur-list {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        position: relative; z-index: 1;
+        display: flex; flex-direction: column; gap: 12px;
     }
 
     .panel-fitur-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        display: flex; align-items: center; gap: 12px;
         background: rgba(255,255,255,0.06);
         border: 1px solid rgba(255,255,255,0.1);
         border-radius: var(--radius-kecil);
@@ -142,92 +111,58 @@
     }
 
     .panel-fitur-ikon {
-        width: 32px;
-        height: 32px;
+        width: 32px; height: 32px;
         background: rgba(82,183,136,0.2);
         border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: flex; align-items: center; justify-content: center;
         color: var(--hijau-muda);
-        font-size: 14px;
-        flex-shrink: 0;
+        font-size: 14px; flex-shrink: 0;
     }
 
-    .panel-fitur-teks {
-        font-size: 13px;
-        color: #c5d9c9;
-    }
+    .panel-fitur-teks { font-size: 13px; color: #c5d9c9; }
 
-    /* Panel kanan - form */
     .login-panel-kanan {
         padding: 48px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: flex; flex-direction: column; justify-content: center;
     }
 
-    .form-judul {
-        font-size: 26px;
-        color: var(--teks-gelap);
-        margin-bottom: 6px;
-    }
+    .form-judul { font-size: 26px; color: var(--teks-gelap); margin-bottom: 6px; }
+    .form-sub   { font-size: 13px; color: var(--teks-abu); margin-bottom: 30px; }
 
-    .form-sub {
-        font-size: 13px;
-        color: var(--teks-abu);
-        margin-bottom: 30px;
-    }
-
-    /* Alert error */
     .alert-error {
         background: #fef2f2;
         border: 1px solid #fca5a5;
         border-radius: var(--radius-kecil);
         padding: 10px 14px;
-        font-size: 13px;
-        color: #dc2626;
+        font-size: 13px; color: #dc2626;
         margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: flex; align-items: center; gap: 8px;
     }
 
-    /* Alert sukses */
     .alert-sukses {
         background: #f0fdf4;
         border: 1px solid #86efac;
         border-radius: var(--radius-kecil);
         padding: 10px 14px;
-        font-size: 13px;
-        color: #16a34a;
+        font-size: 13px; color: #16a34a;
         margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: flex; align-items: center; gap: 8px;
     }
 
-    /* Form group */
-    .form-group {
-        margin-bottom: 18px;
-    }
+    .form-group { margin-bottom: 18px; }
 
     .form-label {
         display: block;
-        font-size: 13px;
-        font-weight: 600;
+        font-size: 13px; font-weight: 600;
         color: var(--teks-gelap);
         margin-bottom: 7px;
     }
 
-    .input-wrapper {
-        position: relative;
-    }
+    .input-wrapper { position: relative; }
 
     .input-ikon {
         position: absolute;
-        left: 12px;
-        top: 50%;
+        left: 12px; top: 50%;
         transform: translateY(-50%);
         color: var(--teks-abu);
         font-size: 15px;
@@ -240,8 +175,7 @@
         border-radius: var(--radius-kecil);
         padding: 11px 14px 11px 38px;
         font-family: var(--font-body);
-        font-size: 14px;
-        color: var(--teks-gelap);
+        font-size: 14px; color: var(--teks-gelap);
         background: var(--krem);
         outline: none;
         transition: border-color 0.2s, box-shadow 0.2s;
@@ -253,60 +187,32 @@
         background: var(--putih);
     }
 
-    .form-input::placeholder {
-        color: #b0bdb3;
-    }
+    .form-input::placeholder { color: #b0bdb3; }
+    .form-input.is-invalid   { border-color: #fca5a5; }
 
-    /* Jika ada error pada field */
-    .form-input.is-invalid {
-        border-color: #fca5a5;
-    }
+    .teks-error { font-size: 12px; color: #dc2626; margin-top: 5px; }
 
-    .teks-error {
-        font-size: 12px;
-        color: #dc2626;
-        margin-top: 5px;
-    }
-
-    /* Tombol submit */
     .btn-submit {
         width: 100%;
         justify-content: center;
-        padding: 12px;
-        font-size: 15px;
-        margin-top: 6px;
+        padding: 12px; font-size: 15px; margin-top: 6px;
     }
 
-    /* Link daftar */
-    .link-daftar {
+    .catatan-akses {
         text-align: center;
         margin-top: 20px;
-        font-size: 13px;
-        color: var(--teks-abu);
+        padding: 10px 14px;
+        background: var(--hijau-pale);
+        border-radius: var(--radius-kecil);
+        font-size: 12px; color: var(--hijau);
+        display: flex; align-items: center;
+        justify-content: center; gap: 6px;
     }
 
-    .link-daftar a {
-        color: var(--hijau);
-        font-weight: 600;
-    }
-
-    .link-daftar a:hover {
-        text-decoration: underline;
-    }
-
-    /* Responsive */
     @media (max-width: 680px) {
-        .login-wrapper {
-            grid-template-columns: 1fr;
-        }
-
-        .login-panel-kiri {
-            display: none; /* Sembunyikan panel kiri di mobile */
-        }
-
-        .login-panel-kanan {
-            padding: 32px 24px;
-        }
+        .login-wrapper { grid-template-columns: 1fr; }
+        .login-panel-kiri { display: none; }
+        .login-panel-kanan { padding: 32px 24px; }
     }
 </style>
 @endsection
@@ -350,9 +256,8 @@
         {{-- Panel Kanan (Form) --}}
         <div class="login-panel-kanan">
             <h2 class="form-judul">Masuk ke Akun</h2>
-            <p class="form-sub">Masukkan email dan password untuk melanjutkan.</p>
+            <p class="form-sub">Masukkan username dan password untuk melanjutkan.</p>
 
-            {{-- Tampilkan pesan error dari controller --}}
             @if($errors->any())
                 <div class="alert-error">
                     <i class="bi bi-exclamation-circle-fill"></i>
@@ -360,7 +265,6 @@
                 </div>
             @endif
 
-            {{-- Tampilkan pesan sukses (misal setelah register) --}}
             @if(session('sukses'))
                 <div class="alert-sukses">
                     <i class="bi bi-check-circle-fill"></i>
@@ -368,27 +272,26 @@
                 </div>
             @endif
 
-            {{-- Form Login --}}
             <form action="/login" method="POST">
                 @csrf
 
-                {{-- Field Email --}}
+                {{-- Field Username --}}
                 <div class="form-group">
-                    <label class="form-label" for="email">Alamat Email</label>
+                    <label class="form-label" for="username">Username</label>
                     <div class="input-wrapper">
-                        <i class="bi bi-envelope input-ikon"></i>
+                        <i class="bi bi-person input-ikon"></i>
                         <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            class="form-input @error('email') is-invalid @enderror"
-                            placeholder="Masukkan email kamu"
-                            value="{{ old('email') }}"
+                            type="text"
+                            id="username"
+                            name="username"
+                            class="form-input @error('username') is-invalid @enderror"
+                            placeholder="Masukkan username kamu"
+                            value="{{ old('username') }}"
                             required
-                            autocomplete="email"
+                            autocomplete="username"
                         >
                     </div>
-                    @error('email')
+                    @error('username')
                         <p class="teks-error">{{ $message }}</p>
                     @enderror
                 </div>
@@ -413,19 +316,18 @@
                     @enderror
                 </div>
 
-                {{-- Tombol Submit --}}
                 <button type="submit" class="btn btn-hijau btn-submit">
                     <i class="bi bi-box-arrow-in-right"></i>
                     Masuk Sekarang
                 </button>
             </form>
 
-            {{-- Link ke halaman register --}}
-            <p class="link-daftar">
-                Belum punya akun? <a href="/register">Daftar di sini</a>
-            </p>
-        </div>
+            <div class="catatan-akses">
+                <i class="bi bi-shield-lock-fill"></i>
+                Akses sistem hanya untuk owner Surya Farm.
+            </div>
 
+        </div>
     </div>
 </div>
 @endsection

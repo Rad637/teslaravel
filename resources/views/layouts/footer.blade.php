@@ -20,7 +20,11 @@
 
         </div>
 
+<<<<<<< HEAD
         {{-- Garis bawah 
+=======
+        {{-- Garis bawah
+>>>>>>> 728bf92 (part-2)
         <div class="footer-bawah">
             <span>&copy; {{ date('Y') }} SISFARM - Surya Farm. Hak cipta dilindungi.</span>
             <span>Dibuat untuk memajukan pertanian Indonesia 🌾</span>

@@ -179,11 +179,11 @@
         color: var(--teks-abu);
     }
 
-    /* ============ STATISTIK ============ */
+    /* ============ STATISTIK ============
     .seksi-statistik {
         background: var(--hijau-tua);
         padding: 60px 0;
-    }
+    } */
 
     .statistik-grid {
         display: grid;
@@ -552,9 +552,9 @@
                     SISFARM hadir untuk membantu Surya Farm dalam pencatatan stok, hasil panen, distribusi, dan pemasaran produk secara digital. Semua dalam satu sistem yang mudah digunakan.
                 </p>
                 <div class="hero-tombol">
-                    <a href="/register" class="btn btn-hijau">
-                        <i class="bi bi-person-plus-fill"></i>
-                        Daftar Sekarang
+                    <a href="/login" class="btn btn-hijau">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        Masuk ke SISFARM
                     </a>
                     <a href="/#tentang" class="btn btn-outline">
                         <i class="bi bi-info-circle"></i>
@@ -596,12 +596,11 @@
     </div>
 </section>
 
-{{-- ============ TENTANG ============ --}}
+{{-- ============ TENTANG ============
 <section class="seksi-tentang" id="tentang">
     <div class="container">
         <div class="tentang-inner">
 
-            {{-- Visual kiri --}}
             <div class="tentang-visual fade-up">
                 <i class="bi bi-tree-fill tentang-ikon-besar"></i>
                 <div class="tentang-info-box">
@@ -612,7 +611,7 @@
                 </div>
             </div>
 
-            {{-- Teks kanan --}}
+
             <div class="fade-up delay-1">
                 <p class="eyebrow">Tentang Kami</p>
                 <h2 class="seksi-judul">Mengapa SISFARM Dibutuhkan?</h2>
@@ -644,9 +643,9 @@
 
         </div>
     </div>
-</section>
+</section>--}}
 
-{{-- ============ FITUR SISFARM ============ --}}
+{{-- ============ FITUR SISFARM ============
 <section class="seksi-fitur">
     <div class="container">
         <div class="seksi-header fade-up">
@@ -721,6 +720,6 @@
 
         </div>
     </div>
-</section>
+</section>--}}
 
 @endsection

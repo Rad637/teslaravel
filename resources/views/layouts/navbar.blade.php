@@ -32,9 +32,6 @@
                 <a href="/login" class="btn btn-outline" style="padding: 7px 16px; font-size: 13px;">
                     Masuk
                 </a>
-                <a href="/register" class="btn btn-hijau" style="padding: 7px 16px; font-size: 13px;">
-                    Daftar
-                </a>
             @endif
         </div>
 
@@ -57,7 +54,6 @@
             </form>
         @else
             <a href="/login" class="mobile-link">Masuk</a>
-            <a href="/register" class="mobile-link" style="color: var(--hijau); font-weight: 600;">Daftar Sekarang</a>
         @endif
     </div>
 </nav>

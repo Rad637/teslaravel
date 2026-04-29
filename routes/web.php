@@ -23,10 +23,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/login', [AuthController::class, 'tampilLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'prosesLogin'])->name('login.proses');
 
-// Halaman register - GET untuk tampil form, POST untuk proses daftar
-Route::get('/register', [AuthController::class, 'tampilRegister'])->name('register');
-Route::post('/register', [AuthController::class, 'prosesRegister'])->name('register.proses');
-
 // Logout - pakai POST supaya lebih aman
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
